@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,33 +15,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-Ue-reV">
-                                <rect key="frame" x="125" y="193" width="647" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-Ue-reV">
+                                <rect key="frame" x="96" y="192" width="704" height="31"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZGQ-92-Y1i"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-Ti-ax8">
-                                <rect key="frame" x="433" y="285" width="31" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="HIT"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-Ti-ax8">
+                                <rect key="frame" x="426" y="238" width="44" height="40"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="checkmark.square" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="touchUpHitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hro-io-RFq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxa-y7-OmL">
-                                <rect key="frame" x="763" y="46" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RESET"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Random Number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1n-N3-6Tk">
+                                <rect key="frame" x="260" y="20" width="376" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-o1-woW">
+                                <rect key="frame" x="440" y="159" width="16" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRV-4n-MgI">
+                                <rect key="frame" x="64" y="198.5" width="18" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HuN-Vp-P4q">
+                                <rect key="frame" x="436.5" y="368" width="23" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1U-4C-aEN">
+                                <rect key="frame" x="64" y="26" width="26" height="25"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="info.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxa-y7-OmL">
+                                <rect key="frame" x="804" y="26" width="28" height="25"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="memories" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSd-Bn-uBj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LCy-yC-mdQ">
+                                <rect key="frame" x="814" y="198.5" width="18" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O1U-4C-aEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="09P-aV-XnQ"/>
+                            <constraint firstItem="tVx-Ti-ax8" firstAttribute="top" secondItem="uNc-Ue-reV" secondAttribute="bottom" constant="16" id="11L-Lm-cgh"/>
+                            <constraint firstItem="uNc-Ue-reV" firstAttribute="leading" secondItem="DRV-4n-MgI" secondAttribute="trailing" constant="16" id="1lk-M5-WH3"/>
+                            <constraint firstItem="uNc-Ue-reV" firstAttribute="centerY" secondItem="DRV-4n-MgI" secondAttribute="centerY" id="34i-UX-3Hf"/>
+                            <constraint firstItem="uNc-Ue-reV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Lq-D8-CmJ"/>
+                            <constraint firstItem="DRV-4n-MgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8jz-9f-xAh"/>
+                            <constraint firstItem="HuN-Vp-P4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AW1-I7-n70"/>
+                            <constraint firstItem="kxa-y7-OmL" firstAttribute="centerY" secondItem="O1U-4C-aEN" secondAttribute="centerY" id="BRr-Em-KCY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HuN-Vp-P4q" secondAttribute="bottom" constant="8" id="Fsw-WH-14w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kxa-y7-OmL" secondAttribute="trailing" constant="20" id="JxT-3t-YJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LCy-yC-mdQ" secondAttribute="trailing" constant="20" id="KhQ-fm-C1W"/>
+                            <constraint firstItem="Z1n-N3-6Tk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LFO-Pe-i6b"/>
+                            <constraint firstItem="uNc-Ue-reV" firstAttribute="top" secondItem="ekb-o1-woW" secondAttribute="bottom" constant="16" id="Rkf-2i-uqb"/>
+                            <constraint firstItem="uNc-Ue-reV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2a-cO-kcV"/>
+                            <constraint firstItem="LCy-yC-mdQ" firstAttribute="leading" secondItem="uNc-Ue-reV" secondAttribute="trailing" constant="16" id="ai6-cm-LOz"/>
+                            <constraint firstItem="Z1n-N3-6Tk" firstAttribute="centerY" secondItem="O1U-4C-aEN" secondAttribute="centerY" id="auA-CD-Ynw"/>
+                            <constraint firstItem="ekb-o1-woW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cN5-de-R1C"/>
+                            <constraint firstItem="Z1n-N3-6Tk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceF-qL-StH"/>
+                            <constraint firstItem="LCy-yC-mdQ" firstAttribute="centerY" secondItem="DRV-4n-MgI" secondAttribute="centerY" id="loj-ld-D97"/>
+                            <constraint firstItem="tVx-Ti-ax8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tE1-GJ-tEh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="slider" destination="uNc-Ue-reV" id="yyK-IS-Rs9"/>
@@ -54,8 +121,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="memories" catalog="system" width="128" height="110"/>
     </resources>
 </document>

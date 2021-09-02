@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slider.setThumbImage(#imageLiteral(resourceName: "slider_thumb"), for: .normal)
     }
     
-    @IBAction func sliderValueChanged(_ sender:UISlider){
+    @IBAction func sliderValueChanged(_ sender:UISlider){         
         print(sender.value)
     }
     //IBAction은 인터페이스 빌더에 요소들이 이벤트를 받았을 때 반응하기 위한 역할.
