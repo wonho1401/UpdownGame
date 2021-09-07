@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,6 +67,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="x5g-5Z-eUw" kind="presentation" modalTransitionStyle="crossDissolve" id="NGC-2N-xsU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxa-y7-OmL">
                                 <rect key="frame" x="804" y="26" width="28" height="25"/>
@@ -123,10 +127,86 @@
             </objects>
             <point key="canvasLocation" x="138.61607142857142" y="76.811594202898561"/>
         </scene>
+        <!--Credit View Controller-->
+        <scene sceneID="bMz-0N-WHO">
+            <objects>
+                <viewController id="x5g-5Z-eUw" customClass="CreditViewController" customModule="UpdownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VNi-pG-Uh8">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-BQ-gcR">
+                                <rect key="frame" x="284" y="20" width="548" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">
+
+
+
+Hello!
+
+I'm wonho Jeong.
+
+
+my github: https://github.com/wonho1401
+
+my email: wonho1401@gmail.com
+
+I'm interested in iOS development.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYI-FL-4fl">
+                                <rect key="frame" x="64" y="20" width="38" height="35"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="x5g-5Z-eUw" eventType="touchUpInside" id="Kmg-e0-QIG"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="OaC-Ak-VQz">
+                                <rect key="frame" x="64" y="57" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="KIM-b3-lA3"/>
+                                    <constraint firstAttribute="width" constant="200" id="vct-FH-adw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aiH-wa-mma"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aiH-wa-mma" firstAttribute="trailing" secondItem="RUL-BQ-gcR" secondAttribute="trailing" constant="20" id="LvO-PH-3Ws"/>
+                            <constraint firstItem="RUL-BQ-gcR" firstAttribute="leading" secondItem="OaC-Ak-VQz" secondAttribute="trailing" constant="20" id="Pfu-z9-GAF"/>
+                            <constraint firstItem="OaC-Ak-VQz" firstAttribute="leading" secondItem="gYI-FL-4fl" secondAttribute="leading" id="d38-It-RM9"/>
+                            <constraint firstItem="OaC-Ak-VQz" firstAttribute="centerY" secondItem="VNi-pG-Uh8" secondAttribute="centerY" id="gOj-w3-otw"/>
+                            <constraint firstItem="RUL-BQ-gcR" firstAttribute="top" secondItem="aiH-wa-mma" secondAttribute="top" constant="20" id="q3w-0e-P0a"/>
+                            <constraint firstItem="gYI-FL-4fl" firstAttribute="top" secondItem="aiH-wa-mma" secondAttribute="top" constant="20" id="qXL-ZF-Unh"/>
+                            <constraint firstItem="gYI-FL-4fl" firstAttribute="leading" secondItem="aiH-wa-mma" secondAttribute="leading" constant="20" id="qnA-9M-C4M"/>
+                            <constraint firstAttribute="bottom" secondItem="RUL-BQ-gcR" secondAttribute="bottom" constant="20" id="v33-Bo-PJk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIN-3Q-gTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787.5" y="76.811594202898561"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="profile" width="1050" height="1050"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
